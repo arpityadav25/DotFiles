@@ -1,0 +1,53 @@
+(defwindow sidebar
+  :geometry (geometry :x "15px" :y "350px" :width "70px" :height "700px")
+  :stacking "bg"
+  :focusable false
+  :below true
+  :type "dock"
+  :exclusive: true
+  (box
+    :orientation "vertical"
+    :class "sidebar-box"
+    :spacing 35
+    (button
+      :class "icon-btn"
+      :onclick "firefox"
+      ""
+    )
+    (button
+      :class "icon-btn"
+      :onclick "code"
+      ""
+    )
+    (button
+      :class "icon-btn"
+      :onclick "kitty --directory /home/arpit-yadav"
+      ""
+    )
+    (button
+      :class "icon-btn"
+      :onclick "thunar /home/arpit-yadav/Desktop/"
+      ""
+    )
+    (button
+      :class "icon-btn"
+      :onclick "spotify"
+      ""
+    )
+    (button
+      :class "icon-btn"
+      :onclick "flameshot gui"
+      ""
+    )
+    (button
+      :class "icon-btn"
+      :onclick "nitrogen"
+      "󰸉"
+    )
+    (button
+      :class "icon-btn"
+      :onclick "rofi -show drun"
+       "󰸳"
+    )
+  )
+)

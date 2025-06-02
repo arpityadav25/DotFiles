@@ -1,0 +1,20 @@
+(defpoll datetime :interval "1s"
+  "date '+  %H:%M   |   %d %b'"
+)
+(defwindow topbar
+  :geometry (geometry :x "15px" :y "10px" :width "400px" :height "45px")
+  :stacking "bg"
+  :focusable false
+  :below true
+  :type "desktop"
+  (box
+    :orientation "horizontal"
+    :class "top-bar"
+    :spacing 20
+    ;; Date and Time
+    (label 
+      :class "date-time"
+      :text datetime  ;; Dynamically updates
+    )
+  )
+)

@@ -1,0 +1,44 @@
+(defwindow bottombar
+  :geometry (geometry :x "1318px" :y "1020px" :width "600px" :height "35px")
+  :stacking "bg"
+  :focusable false
+  :below true
+  :type "desktop"
+  (box
+    :orientation "horizontal"
+    :class "bottom-bar"
+    :spacing 18
+    (button
+      :class "ess-button"
+      :onclick "~/.config/eww/scripts/system-toggle.sh mic"
+      ""
+    )
+    (button
+      :class "ess-button"
+      :onclick "~/.config/eww/scripts/system-toggle.sh mute"
+      ""
+    )
+    (button
+      :class "ess-button"
+      :onclick "alacritty --class floatingwifi -e nmtui"
+      "󰤥"
+    )
+    
+    (button
+      :class "ess-button"
+      :onclick "~/.config/eww/scripts/system-toggle.sh bluetooth"
+      "󰂰"
+    )
+    (button
+      :class "reboot-btn"
+      :onclick "systemctl reboot"
+      "󰜉"
+    )
+    (button
+      :class "power-btn"
+      :onclick "shutdown now"
+      :onrightclick "i3-msg exit"
+      "⏻"
+    )
+  )
+)

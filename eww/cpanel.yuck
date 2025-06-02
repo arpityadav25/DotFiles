@@ -1,0 +1,37 @@
+(defwindow cpanel
+  :geometry (geometry :x "110px" :y "100px" :width "700px" :height "450px")
+  :stacking "bg"
+  :focusable false
+  :below true
+  :type "desktop"
+  (box
+    :orientation "horizontal"
+    :class "control-panel"
+    :spacing 10
+    ;; Control Buttons
+    (box
+      :orientation "vertical"
+      :spacing 10
+      (button :class "weather-btn" "󰖑")
+      (box
+        :orientation "vertical"
+        :spacing 7
+        (button :class "system-stats" "")
+        (button :class "system-stats" "")
+      )
+    )
+    (box
+      :orientation "vertical"
+      :spacing 10
+      (button :class "battery-btn" "󰂁")
+      (button :class "storage-btn" "")
+    )
+    (box
+      :orientation "horizontal"
+      :spacing 10
+      (button :class "bright-btn" "")
+      (button :class "bright-btn" "󰃟")
+    ) 
+  )
+)
+

@@ -1,0 +1,9 @@
+(defwindow menu
+  :geometry (geometry :x "15px" :y "80px" :width "60px" :height "60px")
+  :stacking "bg"
+  :focusable false
+  :below true
+  :type "desktop"
+
+  (button :class "menu-btn" "")
+)

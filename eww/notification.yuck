@@ -1,0 +1,9 @@
+(defwindow notification
+  :geometry (geometry :x "15px" :y "160px" :width "60px" :height "60px")
+  :stacking "bg"
+  :focusable false
+  :below true
+  :type "desktop"
+
+  (button :class "notification-btn" "") ;; Notification bell icon
+)

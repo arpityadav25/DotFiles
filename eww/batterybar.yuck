@@ -1,0 +1,17 @@
+(defpoll battery_percent
+  :interval "5s"
+  "cat /sys/class/power_supply/BAT0/capacity")
+
+(defwindow batterybar
+  :geometry (geometry :x "15px" :y "240px" :width "60px" :height "60px")  ;; Same size as your menu
+  :stacking "bg"
+  :focusable false
+  :below true
+  :type "desktop"
+
+  ;; Battery button that shows battery percentage
+  (button
+    :class "battery-btn"
+    (label :text "${battery_percent}%")
+  )
+)

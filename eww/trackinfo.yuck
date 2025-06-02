@@ -1,0 +1,24 @@
+(defpoll track_info
+  :interval "1s"
+   "track=$(playerctl metadata --format '󰎇 {{ artist }} - {{ title }}' 2>/dev/null)
+   if [ -z \"$track\" ]; then
+     echo '󰝛 No active playback'
+   else
+     echo \"$track\" | awk '{ if (length(\$0) > 30) print substr(\$0, 1, 30)\"...\"; else print \$0 }'
+   fi")
+
+(defwindow trackinfo
+  :geometry (geometry :x "435px" :y "10px" :width "335px" :height "45px")
+  :stacking "bg"
+  :focusable false
+  :below true
+  :type "desktop"
+
+  (box
+    :orientation "horizontal"
+    :class "track-info-bar"
+    (label
+      :class "track-label"
+      :text track_info)
+  )
+)

@@ -1,0 +1,17 @@
+(defwindow musicbar
+  :geometry (geometry :x "780px" :y "10px" :width "200px" :height "45px")
+  :stacking "bg"
+  :focusable false
+  :below true
+  :type "desktop"
+
+  (box
+    :orientation "horizontal"
+    :class "music-bar"
+    :spacing 10
+    ;; Control Buttons
+    (button :class "music-btn" :onclick "playerctl previous" "󰒮")
+    (button :class "music-btn" :onclick "playerctl play-pause" "󰐎")
+    (button :class "music-btn" :onclick "playerctl next" "󰒭")
+  )
+)

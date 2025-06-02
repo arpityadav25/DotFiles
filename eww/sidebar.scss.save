@@ -1,0 +1,27 @@
+.sidebar-box {
+  background-color: #B6B2B2;
+  padding: 9px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+}
+
+.icon-btn {
+  all: unset;
+  background-color: #2D2E2E;
+  color: #FBFBFB;
+  padding-right: 10px;
+  font-size: 38px;
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #EAE9E9;
+    color: #0F0F0F;
+  }
+  &:active {
+    background-color: #7FB7BE;
+    color: #120309;
+    transition: background-color 0.9s ease;
+  }
+}
